@@ -20,15 +20,15 @@ print(un_ejemplo.atributo1)
 
 class Gato:
 
- #atributo de clase
- especie="mamífero"
+#atributo de clase
+    especie="mamífero"
  
     def __init__(self, nombre, edad):
         self.nombre=nombre
         self.edad=edad
         self.alimentos=[] 
  
-    def esAdulto(self):
+    def verEtapaDeVida(self):
         if self.edad>1:
             print(self.nombre, "es adulto")
         else:
@@ -107,7 +107,7 @@ pedro=AgenteVentas(4)
 print(pedro.numeroMostrador)
 
 #Atributo de superclase no existe
-print(pedro.nombre)
+#  print(pedro.nombre) Este código da error
 
 #Reimplementación de método __init__ llamando al de la superclase
 class AgenteVentas(Empleado):
@@ -126,13 +126,13 @@ print(pedro.calcularSueldo(100, 3000))
 
 #Subclase con método propio
 class Tripulante(Empleado):        
-    def mostrarRenovacionLicencia():
+    def mostrarRenovacionLicencia(self):
         if self.edad<50:
             print("Renueva su licencia cada 1 año")
         else:
             print("Renueva su licencia cada 6 meses")
 
-lucas=Tripulante("Lucas Gutierrez", "H618", 60000, 40)
+lucas=Tripulante("Lucas Gutierrez", 40, "H618", 60000)
 print(lucas.mostrarRenovacionLicencia())
 
 ###-----------------------------
@@ -144,8 +144,9 @@ class Carrera:
         self.nombre=nombre
         self.materias={}
      
- #Ocultar la implementación de una colección implementando un método propio para agregar elementos
- def agregarMateria(self, materia, codigo):
+#Ocultar la implementación de una colección implementando un método
+#propio para agregar elementos
+    def agregarMateria(self, materia, codigo):
         self.materias[codigo]=materia
 
 class Materia:
@@ -175,11 +176,11 @@ class Materia:
     def __init__(self, nombre, profesor, fecha):
         self.nombre=nombre
         self.profesor=profesor
- self.fechaInicioDictado=fecha  #no puede ser anterior a 2006
+        self.fechaInicioDictado=fecha  #no puede ser anterior a 2006
     
     @property
     def fechaInicioDictado(self):
- print("Se está accediendo mediante property")
+        print("Se está accediendo mediante property")
         return self._fechaInicioDictado
 
     @fechaInicioDictado.setter
@@ -205,7 +206,7 @@ print(quimica.fechaInicioDictado)
 
 #Ejemplo en que se accede a un atributo público y se crea una nueva referencia a él
 copia=ing.materias
-print(len(ing.materias)
+print(len(ing.materias))
 
 #Mediante la nueva referencia, se modifica la colección contenida en el objeto
 copia[999]=quimica
@@ -215,13 +216,13 @@ class Carrera:
     def __init__(self, nombre):
         self.nombre=nombre
  #Atributo oculto
-     self.__materias={}
+        self.__materias={}
      
- def agregarMateria(self, materia, codigo):
+    def agregarMateria(self, materia, codigo):
         self.__materias[codigo]=materia
  
 #El atributo es inaccesible mediante su nombre 
-copia=ing.__materias
+# copia=ing.__materias Este código da error
 
 ###-----------------------------
 ###Ejemplos: polimorfismo
