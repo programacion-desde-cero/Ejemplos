@@ -20,8 +20,8 @@ print(un_ejemplo.atributo1)
 
 class Gato:
 
- #atributo de clase
- especie="mamífero"
+    #atributo de clase
+    especie="mamífero"
  
     def __init__(self, nombre, edad):
         self.nombre=nombre
@@ -98,7 +98,7 @@ class Empleado:
     
 
 class AgenteVentas(Empleado):
-#Reimplementación de método __init__ en la subclase
+    #Reimplementación de método __init__ en la subclase
     def __init__(self, mostrador):
         self.numeroMostrador=mostrador
 
@@ -144,8 +144,8 @@ class Carrera:
         self.nombre=nombre
         self.materias={}
      
- #Ocultar la implementación de una colección implementando un método propio para agregar elementos
- def agregarMateria(self, materia, codigo):
+    #Ocultar la implementación de una colección implementando un método propio para agregar elementos
+    def agregarMateria(self, materia, codigo):
         self.materias[codigo]=materia
 
 class Materia:
@@ -179,7 +179,7 @@ class Materia:
     
     @property
     def fechaInicioDictado(self):
- print("Se está accediendo mediante property")
+        print("Se está accediendo mediante property")
         return self._fechaInicioDictado
 
     @fechaInicioDictado.setter
