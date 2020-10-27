@@ -15,20 +15,20 @@ void imprimirLista(Nodo *inicio);
 
 
 //Inserta tipo cola
-Nodo* agregarAlfinal(Nodo* inicio, int elemento){
+Nodo* agregarAlFinal(Nodo* inicio, int elemento){
     Nodo *nuevo = new Nodo;
     nuevo->dato=elemento;
     nuevo->siguiente=nullptr;
 
     if (inicio == nullptr){
         inicio=nuevo;
-    
+    }
     else{
         Nodo *aux = inicio;
         while (aux->siguiente != nullptr)
             aux = aux->siguiente;
         aux->siguiente=nuevo;
-    
+    }
     return inicio;
 }
 
@@ -45,7 +45,7 @@ int main()
     while (num != 0){
         inicio=agregarAlFinal(inicio, num);
         cin >> num;
-    
+    }
     cout << "La lista queda asi: \n";
     imprimirLista(inicio);
     
