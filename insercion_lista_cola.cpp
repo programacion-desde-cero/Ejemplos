@@ -1,5 +1,7 @@
 //Ejemplo correspondiente al video https://youtu.be/PQyHVUzR7bU
 #include <iostream>
+using namespace std;
+
 
 struct Nodo {
     int dato;
