@@ -1,3 +1,5 @@
+/* Dado un arreglo de enteros, mover todos los ceros hacia la derecha, sin cambiar el orden de los demás números. */
+
 #include <iostream>
 #include <vector>
 using namespace std;
