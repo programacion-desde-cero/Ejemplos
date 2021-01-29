@@ -1,4 +1,7 @@
-/* Dado un arreglo de enteros, mover todos los ceros hacia la derecha, sin cambiar el orden de los demás números. */
+/*
+Dado un arreglo de enteros, mover todos los ceros hacia la derecha, sin cambiar el orden de los demás números. 
+Video explicativo: https://www.youtube.com/watch?v=nADemX9stHY
+*/
 
 #include <iostream>
 #include <vector>
