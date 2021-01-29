@@ -1,3 +1,5 @@
+/* Dado un arreglo de números ordenados de forma ascendente, hallar un par de ellos cuya suma coincida con otro número, también dado. */
+
 #include <iostream>
 #include <vector>
 using namespace std;
