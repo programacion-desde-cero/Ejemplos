@@ -1,5 +1,5 @@
 /*
-Dado un arreglo de números ordenados de forma ascendente, hallar un par de ellos cuya suma coincida con otro número, también dado. 
+Dado un arreglo de números ordenados de forma ascendente, decir si existe un par de ellos cuya suma coincida con otro número, también dado. 
 Video explicativo: https://www.youtube.com/watch?v=nADemX9stHY
 */
 
