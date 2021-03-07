@@ -14,18 +14,18 @@ bool existeParASumar(const vector<int> &numeros, int resultado) {
 	while (inferior < superior) {
 		int s = numeros[inferior] + numeros[superior];
 		if (s == resultado)
-			return true;
+		    return true;
 		if (s < resultado)
-		    inferior+=1;
+		    inferior += 1;
 		else
-		    superior-=1;
+		    superior -= 1;
 	}
 	return false;
 }
 
 
 int main() {
-    vector<int> a={1, 2, 3, 9};
+    vector<int> a = {1, 2, 3, 9};
     if (existeParASumar(a, 8))
         cout << "existe" << endl;
     else
