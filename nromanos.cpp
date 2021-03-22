@@ -28,14 +28,13 @@ int romanoAInt(string romano) {
 }
 
 
-int main(int argc, char *argv[])
-{
-	if (argc != 2) {
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
         cout << "Error: el programa " << argv[0] << " debe ejecutarse con un argumento.\n";
         return -1;
-	}
+    }
     else {
-		cout << "El decimal equivalente es: " << romanoAInt(argv[1]);
-		return 0;
-	}
+        cout << "El decimal equivalente es: " << romanoAInt(argv[1]);
+        return 0;
+    }
 }
